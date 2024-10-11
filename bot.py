@@ -32,5 +32,9 @@ def download_video(video_url):
         log_downloaded_url(video_url)
 
 if __name__ == "__main__":
-    video_url = input("Masukkan URL video Reels yang ingin diunduh: ")
-    download_video(video_url)
+    while True:
+        video_url = input("Masukkan URL video Reels yang ingin diunduh (atau ketik 'exit' untuk keluar): ")
+        if video_url.lower() == 'exit':
+            print("Keluar dari program.")
+            break
+        download_video(video_url)
